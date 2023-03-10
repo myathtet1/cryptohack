@@ -160,12 +160,15 @@ def decrypt(key, ciphertext):
     # Initial add round key step
     add_round_key(state, round_keys[N_ROUNDS])
     print("Round key = ", end="")
+    print(state)
     print(round_keys[N_ROUNDS])
     for i in range(N_ROUNDS - 1, 0, -1):
         inv_shift_rows(state)
         sub_bytes(state, inv_s_box)
+        print(state)
         add_round_key(state, round_keys[i])
         inv_mix_columns(state)
+        # print(state)
 
     # Run final round (skips the InvMixColumns step)
     inv_shift_rows(state)
