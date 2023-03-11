@@ -1,6 +1,6 @@
 from PIL import Image
-img1 = Image.open('flag.png')
-img2 = Image.open('lemur.png')
+img1 = Image.open('Cryptohack Challenge/XOR/flag.png')
+img2 = Image.open('Cryptohack Challenge/XOR/lemur.png')
 
 pix1 = img1.load()
 pix2 = img2.load()
